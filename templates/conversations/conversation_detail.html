@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load is_booked on_favs i18n %}
+{% block page_title %} {{room.name}} {% endblock page_title %}
+
+{%block content %}
+<div class="container mx-auto my-10 mt-32 flex flex-row">
+    <div class="w-1/4 p-10 border">
+        <span class="text-center w-full block text-lg font-medium">Conversation Between</span>
+        <div class="flex justify-between mt-10 items-center">           
+            {% for user in conversation.participants.all %}
+                <div class="flex flex-col items-center">
+                    {% include 'mixins/user_avatar.html' with user=user %}
+                    <span class="mt-2 text-gray-500">{{user.first_name}}</span>
+                </div>
+                {% if forloop.first %}
+                    <span>&</span>
+                {% endif %}
+            {% endfor %}                      
+        </div>        
+    </div>
+    <div class="flex-grow">    
+        <div class="border flex-grow ml-10 p-10 flex flex-col">
+            {% if conversation.messages.count == 0 %}
+                No Messages
+            {% else %}
+                {% for message in conversation.messages.all %}
+                    <div class="mb-10 
+                    {% if message.user.pk == user.pk %}
+                        self-end
+                    {% endif %}">
+                        <span class="text-sm font-medium text-gray-600">
+                            {{message.user}}
+                        </span>
+                        <div class="mt-px p-5 w-56 rounded 
+                        {% if message.user.pk != user.pk %}
+                        bg-teal-500
+                        text-white
+                        {% else %}
+                        bg-gray-300
+                        {% endif %} 
+                        ">
+                            {{message.message}}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <form class="mt-10 w-1/2 mx-auto" method="POST" action="">
+                {% csrf_token %}
+                <input class="mb-5 box-border" name="message" placeholder="Write a Message" required />
+                <button class="btn-link">Send Comment</button>
+            </form>
+        </div>
+    </div>
+    <div class="flex flex-col ml-5">
+        <span class="font-medium">{{review.user.first_name}}</span>
+        <span class="text-sm text-gray-500">{{review.created|date:"F Y"}}</span>
+    </div>         
+</div>
+{% endblock %}

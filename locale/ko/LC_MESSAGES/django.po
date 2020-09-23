@@ -1,0 +1,339 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-23 10:32+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: cal.py:23
+msgid "Sun"
+msgstr ""
+
+#: cal.py:24
+msgid "Mon"
+msgstr ""
+
+#: cal.py:25
+msgid "Tue"
+msgstr ""
+
+#: cal.py:26
+msgid "Wed"
+msgstr ""
+
+#: cal.py:27
+msgid "Thu"
+msgstr ""
+
+#: cal.py:28
+msgid "Fri"
+msgstr ""
+
+#: cal.py:29
+msgid "Sat"
+msgstr ""
+
+#: cal.py:32
+msgid "January"
+msgstr "1월"
+
+#: cal.py:33
+msgid "February"
+msgstr "2월"
+
+#: cal.py:34
+msgid "March"
+msgstr "3월"
+
+#: cal.py:35
+msgid "April"
+msgstr "4월"
+
+#: cal.py:36
+msgid "May"
+msgstr "5월"
+
+#: cal.py:37
+msgid "June"
+msgstr "6월"
+
+#: cal.py:38
+msgid "July"
+msgstr "7월"
+
+#: cal.py:39
+msgid "August"
+msgstr "8월"
+
+#: cal.py:40
+msgid "September"
+msgstr "9월"
+
+#: cal.py:41
+msgid "October"
+msgstr "10월"
+
+#: cal.py:42
+msgid "November"
+msgstr "11월"
+
+#: cal.py:43
+msgid "December"
+msgstr "12월"
+
+#: reservations/views.py:23
+msgid "Can't create That Reservation."
+msgstr "그 예약은 불가능합니다."
+
+#: reservations/views.py:64
+msgid "Reservation Updated"
+msgstr "예약이 업데이트 되었습니다."
+
+#: reviews/models.py:13
+msgid "accuracy"
+msgstr "정확도"
+
+#: reviews/models.py:16
+msgid "communication"
+msgstr "의사소통"
+
+#: reviews/models.py:19
+msgid "cleanliness"
+msgstr "청결"
+
+#: reviews/models.py:22
+msgid "location"
+msgstr "입지"
+
+#: reviews/models.py:25 rooms/models.py:84
+msgid "check_in"
+msgstr "체크인"
+
+#: reviews/models.py:28
+msgid "value"
+msgstr "요금"
+
+#: rooms/models.py:59
+msgid "name"
+msgstr "이름"
+
+#: rooms/models.py:61
+msgid "description"
+msgstr "설명"
+
+#: rooms/models.py:64
+msgid "country"
+msgstr "국가"
+
+#: rooms/models.py:66
+msgid "city"
+msgstr "도시"
+
+#: rooms/models.py:68
+msgid "price"
+msgstr "금액"
+
+#: rooms/models.py:70
+msgid "address"
+msgstr "주소"
+
+#: rooms/models.py:72
+msgid "guest"
+msgstr "게스트"
+
+#: rooms/models.py:75
+msgid "beds"
+msgstr "침대"
+
+#: rooms/models.py:78
+msgid "bedrooms"
+msgstr "침실"
+
+#: rooms/models.py:81
+msgid "baths"
+msgstr "욕실"
+
+#: rooms/models.py:87
+msgid "check_out"
+msgstr "체크아웃"
+
+#: rooms/models.py:89
+msgid "instant_book"
+msgstr "즉시예약"
+
+#: rooms/views.py:155
+msgid "Can't delete that photo"
+msgstr "사진을 지울 수 없습니다."
+
+#: rooms/views.py:158
+msgid "Photo Deleted."
+msgstr "사진이 지워졌습니다."
+
+#: rooms/views.py:169
+msgid "Photo Updated"
+msgstr "사진이 업데이트 되었습니다."
+
+#: rooms/views.py:186
+msgid "Photo Uploaded"
+msgstr "사진이 업로드 되었습니다."
+
+#: templates/base.html:26
+msgid "Search by City"
+msgstr "도시로 검색하기"
+
+#: templates/lists/list_detail.html:12
+msgid "Your Favourites"
+msgstr "즐겨찾기"
+
+#: templates/partials/footer.html:4
+msgid "Please don't copy us."
+msgstr "이 사이트를 복제하지 말아주세요."
+
+#: templates/partials/footer.html:5
+msgid "All rights reserved"
+msgstr "모든 권리는 귀속되어 있습니다."
+
+#: templates/partials/nav.html:6
+msgid "Stop Hosting"
+msgstr "호스팅 그만하기"
+
+#: templates/partials/nav.html:8
+msgid "Start Hosting"
+msgstr "호스팅 시작하기"
+
+#: templates/partials/nav.html:13
+msgid "Create Room"
+msgstr "방 생성"
+
+#: templates/partials/nav.html:15
+msgid "Favs"
+msgstr "즐겨찾기"
+
+#: templates/partials/nav.html:16
+msgid "Profile"
+msgstr "프로필"
+
+#: templates/partials/nav.html:17
+msgid "Log out"
+msgstr "로그아웃"
+
+#: templates/partials/nav.html:19
+msgid "Log in"
+msgstr "로그인"
+
+#: templates/partials/nav.html:20
+msgid "Sign Up"
+msgstr "회원가입"
+
+#: templates/rooms/room_detail.html:31
+msgid "Remove to Favourites"
+msgstr "즐겨찾기 제거"
+
+#: templates/rooms/room_detail.html:33
+msgid "Save to Favourites"
+msgstr "즐겨찾기 추가"
+
+#: templates/rooms/room_list.html:24
+#, python-format
+msgid "Page %(current_page)s of %(total_pages)s"
+msgstr "%(total_pages)s 페이지 중 %(current_page)s 페이지"
+
+#: users/models.py:21
+msgid "Male"
+msgstr "남성"
+
+#: users/models.py:22
+msgid "Female"
+msgstr "여성"
+
+#: users/models.py:23
+msgid "Other"
+msgstr "그 외"
+
+#: users/models.py:30
+msgid "English"
+msgstr "영어"
+
+#: users/models.py:31
+msgid "Korean"
+msgstr "한국어"
+
+#: users/models.py:49
+msgid "avatar"
+msgstr "아바타"
+
+#: users/models.py:51
+msgid "gender"
+msgstr "성별"
+
+#: users/models.py:53
+msgid "bio"
+msgstr "상세프로필"
+
+#: users/models.py:54
+msgid "birthdate"
+msgstr "생년월일"
+
+#: users/models.py:62
+msgid "currency"
+msgstr "통화"
+
+#: users/models.py:72
+msgid "login_method"
+msgstr "로그인 방법"
+
+#: users/models.py:86
+msgid "Verify Airbnb Account"
+msgstr "Airbnb 계정을 인증해주세요."
+
+#: users/views.py:40
+msgid "See you again!"
+msgstr "또 봐요!"
+
+#: users/views.py:100
+msgid "Can't get access token"
+msgstr "액세스 토큰을 가져올 수 없습니다."
+
+#: users/views.py:136
+msgid "Can't get your profile."
+msgstr "당신의 프로필을 가져올 수 없습니다."
+
+#: users/views.py:138
+msgid "Can't get code"
+msgstr "코드를 가져올 수 없습니다."
+
+#: users/views.py:167
+msgid "Can't get authorization code."
+msgstr "인증 코드를 가져올 수 없습니다."
+
+#: users/views.py:176
+msgid "Please also give me your email."
+msgstr "당신의 이메일도 입력해 주세요."
+
+#: users/views.py:234
+msgid "First Name"
+msgstr "이름"
+
+#: users/views.py:235
+msgid "Last Name"
+msgstr "성"
+
+#: users/views.py:236
+msgid "Bio"
+msgstr "상세프로필"
+
+#: users/views.py:237
+msgid "Birthdate"
+msgstr "생년월일"
