@@ -63,3 +63,18 @@ def edit_reservation(request, pk, verb):
     reservation.save()
     messages.success(request, _("Reservation Updated"))
     return redirect(reverse("reservations:detail", kwargs={"pk": reservation.pk}))
+
+
+class ReservationListView(View):
+    def get(self, *args, **kwargs):
+        pk = kwargs.get("user_pk")
+        if pk != self.request.user.pk:
+            messages.error(self.request, "You Can't go there")
+            return redirect(reverse("core:home"))
+        reservations = models.Reservation.objects.filter(guest=pk).order_by("-status")
+
+        return render(
+            self.request,
+            "reservations/reservation_list.html",
+            {"reservations": reservations},
+        )

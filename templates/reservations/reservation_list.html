@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block page_name %} Reservation Lists {% endblock page_name%}
+
+{%block content %}
+<div class="container mx-auto pb-10">
+  <div class="flex flex-wrap justify-center -mx-40 mb-10">
+    {% if reservations is None %}
+        <span class="text-red-600 font-bold">{% trans 'No any Reservation yet.' %}</span>
+    {% else %}
+        {% for reserve in reservations %}
+        <div class="w-1/4 flex flex-col border p-3 m-1">
+            {% include 'mixins/room_card.html' with room=reserve.room w='w-full' mb='mb-5' %}
+            
+            {% if reserve.status != 'canceled' %}
+                <span class='ml-2'>{% trans 'Check In' %} : {{reserve.check_in}}</span>
+                <span class="ml-2 mb-5">{% trans 'Check Out' %} : {{reserve.check_out}}</span>
+                <span class="{% if reserve.status == 'pending' %} text-orange-400 {% elif reserve.status == 'confirmed' %} text-teal-500 {% endif %} font-bold mb-3">{{reserve.status}}</span>
+                <a href="{% url 'reservations:detail' reserve.pk %}" class="btn-link mb-10 w-3/4 bg-teal-500 self-center">{% trans 'View Reservation Detail' %}</a>
+            {% else %}
+                <span class="text-red-600 font-bold">{% trans 'This Reservation has canceled' %}</span>
+            {% endif %}
+        </div>
+        {% endfor %}
+    {% endif %}
+  </div>
+      
+  <div class="flex items-center justify-center mx-auto container">
+      {% if page_obj.has_previous %}
+      <a href="?page={{page_obj.previous_page_number}}" class="text-teal-500">
+        <i class="fas fa-arrow-left fa-lg"></i>
+      </a>
+      {% endif %}
+      
+      <span class="mx-3 font-medium text-lg"> 
+        {% blocktrans with current_page=page_obj.number total_pages=page_obj.paginator.num_pages%}Page {{current_page}} of {{total_pages}}{% endblocktrans %}
+      </span>
+      
+      {% if page_obj.has_next %}
+      <a href="?page={{page_obj.next_page_number}}" class="text-teal-500">
+        <i class="fas fa-arrow-right fa-lg"></i>
+      </a>
+      {% endif %}
+    
+  </div>
+</div>
+
+
+{% endblock content %}
